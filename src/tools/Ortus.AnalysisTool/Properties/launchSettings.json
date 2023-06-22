@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ortus.FileBatchProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "--path X:\\project\\mgr\\dumps --extract-files"
+    }
+  }
+}

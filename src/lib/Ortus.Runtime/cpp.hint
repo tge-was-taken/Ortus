@@ -1,0 +1,6 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define ASLR(address) ((size_t)MODULE_HANDLE + (size_t)address - (size_t)BASE_ADDRESS)
+#define FUNCTION_PTR(returnType, callingConvention, function, location, __VA_ARGS__) returnType (callingConvention *function)(__VA_ARGS__) = (returnType(callingConvention*)(__VA_ARGS__))(location)
+#define VTABLE_HOOK(returnType, callingConvention, className, functionName, __VA_ARGS__) typedef returnType callingConvention className##functionName(className* This,##__VA_ARGS__); className##functionName* original##className##functionName; returnType callingConvention implOf##className##functionName(className* This,##__VA_ARGS__)

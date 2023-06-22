@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "bxmconv": {
+      "commandName": "Project",
+      "commandLineArgs": "\"X:\\project\\mgr\\dumps\\data000.cpk_unpacked\\CameraFactorStandard.xml\" test.bxm"
+    }
+  }
+}

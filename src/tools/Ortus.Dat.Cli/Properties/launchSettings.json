@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ortus.Archives.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\smart\\Downloads\\p118.dat_unpacked\""
+    }
+  }
+}
