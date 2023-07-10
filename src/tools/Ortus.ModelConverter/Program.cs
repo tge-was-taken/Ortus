@@ -2,7 +2,7 @@
 using Ortus.Models.Representation;
 using System.Diagnostics;
 
-var path = @"X:\code\repo\Ortus\Ortus.FileBatchProcessor\bin\Debug\net6.0\output\pl1400.wmb";
+var path = @"D:\Development\Archive\Ortus\src\tools\Ortus.Dat.Cli\bin\Debug\net6.0\test.dat_unpacked\pl1010.wmb";
 var model = new Ortus.Models.Wmb4.Model( path );
 ExportObj( model );
 ExportYaml( model );
@@ -10,14 +10,14 @@ ExportJson( model );
 
 static void ExportJson( Ortus.Models.Wmb4.Model model )
 {
-    File.WriteAllText( "out.json", JsonConvert.SerializeObject( Model.FromAsset( model ), Formatting.Indented ) );
+    File.WriteAllText( "out.json", JsonConvert.SerializeObject( Model.FromWMB4( model ), Formatting.Indented ) );
 }
 
 static void ExportYaml( Ortus.Models.Wmb4.Model model )
 {
     File.WriteAllText( "out.yml", new YamlDotNet.Serialization.SerializerBuilder()
         .Build()
-        .Serialize( Model.FromAsset( model ) ) );
+        .Serialize( Model.FromWMB4( model ) ) );
 }
 
 static void ExportObj( Ortus.Models.Wmb4.Model model )

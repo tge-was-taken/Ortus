@@ -12,9 +12,9 @@ namespace Ortus.Models.Wmb4
 
         public Vector3? Tangent { get; set; }
 
-        public byte[] BoneIndices { get; }
+        public byte[] BoneIndices { get; set; }
 
-        public float[] BoneWeights { get; }
+        public float[] BoneWeights { get; set; }
 
         public Vector2? UV2 { get; set; }
 

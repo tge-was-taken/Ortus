@@ -70,7 +70,6 @@ namespace Ortus.Models.Representation
         public static Wmb4.Model ToWMB4( Model model )
         {
             var hasWeights = model.HasWeights;
-            var hasColors = 
 
             // TODO calculate
             var extents = new BoundingBox
@@ -201,6 +200,8 @@ namespace Ortus.Models.Representation
 
                 modelAsset.Groups.Add( assetGroup );
             }
+
+            return modelAsset;
         }
 
         public static Model FromWMB4( Wmb4.Model modelAsset )
@@ -299,7 +300,7 @@ namespace Ortus.Models.Representation
                                             vertexB2 != null && vertexB2.Color != null ? Color.FromRGBA( vertexB2.Color.Value ) :
                                             null;
                             vertexA.UV2 = vertexB.UV2.HasValue ? vertexB.UV2.Value :
-                                            vertexB2 != null && vertexB2.UV2 != null ? vertexB.UV2.Value :
+                                            vertexB2 != null && vertexB2.UV2 != null ? vertexB2.UV2.Value :
                                             null;
 
                             meshA.Vertices.Add( vertexA );
